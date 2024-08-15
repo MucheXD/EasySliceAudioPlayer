@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowW</class>
+ <widget class="QWidget" name="MainWindowW">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>620</width>
+    <height>240</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="ESAudioPlayer.qrc">
+    <normaloff>:/Res/apptitlelogo.png</normaloff>:/Res/apptitlelogo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	/*color:#000000;*/
+	background-color: rgba(248, 250, 252,0);
+	font: 500 10pt &quot;思源黑体 CN VF Medium&quot;;
+}
+QWidget#MainWindowW{
+	background-color: rgb(248, 250, 252);
+	border: solid;
+	border-width: 2px;
+	border-color: hsl(210, 90%, 20%);
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="4" column="0">
+    <widget class="QWidget" name="widget_control" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget
+{
+	border: solid;
+	border-width: 0px 2px 0px 2px;
+	border-color: hsl(210, 90%, 20%);
+}
+QPushButton,QToolButton
+{
+	color: hsl(0, 0%, 10%);
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 3px;
+	border-color: hsl(210, 5%, 90%);
+	background-color: hsl(210, 5%, 100%);
+	padding: 4px 10px 4px 10px;
+}
+QPushButton:hover,QToolButton:hover
+{
+	color: hsl(0, 0%, 5%);
+	border-color: hsl(210, 10%, 88%);
+	background-color: hsl(210, 10%, 98%);
+}
+QPushButton:pressed,QToolButton:pressed
+{
+	color: hsl(0, 0%, 0%);
+	border-color: hsl(210, 15%, 85%);
+	background-color: hsl(210, 15%, 95%);
+}
+QPushButton:disabled,QToolButton:disabled
+{
+	color: hsl(210, 0%, 60%);
+	border-width: 0px;
+	/*border-color: hsl(210, 0%, 85%);*/
+	background-color: hsl(210, 0%, 95%);
+}
+</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <property name="spacing">
+       <number>5</number>
+      </property>
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="ctrl_ss">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ESAudioPlayer.qrc">
+          <normaloff>:/Res/play.svg</normaloff>:/Res/play.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="ctrl_back">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ESAudioPlayer.qrc">
+          <normaloff>:/Res/d10.svg</normaloff>:/Res/d10.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>36</width>
+          <height>36</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="ctrl_forward">
+        <property name="minimumSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ESAudioPlayer.qrc">
+          <normaloff>:/Res/p10.svg</normaloff>:/Res/p10.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>36</width>
+          <height>36</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QWidget" name="widget_timectrl" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget#widget_timectrl
+{
+	border: solid;
+	border-width: 0px 2px 0px 2px;
+	border-color: hsl(210, 90%, 20%);
+}</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="widget_timezone" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton,QToolButton
+{
+	color: hsl(0, 0%, 10%);
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0px;
+	border-color: hsl(210, 5%, 90%);
+	background-color: hsl(210, 5%, 100%);
+	padding: -1px;
+}
+QPushButton:hover,QToolButton:hover
+{
+	color: hsl(0, 0%, 5%);
+	border-color: hsl(210, 10%, 88%);
+	background-color: hsl(210, 10%, 98%);
+}
+QPushButton:pressed,QToolButton:pressed
+{
+	color: hsl(0, 0%, 0%);
+	border-color: hsl(210, 15%, 85%);
+	background-color: hsl(210, 15%, 95%);
+}
+QPushButton:disabled,QToolButton:disabled
+{
+	color: hsl(210, 0%, 60%);
+	border-width: 0px;
+	/*border-color: hsl(210, 0%, 85%);*/
+	background-color: hsl(210, 0%, 95%);
+}
+QPushButton[isHighlighted=true],QToolButton[isHighlighted=true]
+{
+	color: #ffffff;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0px;
+	border-color: hsl(210, 100%, 30%);
+	background-color: hsl(210, 100%, 40%);
+}
+QPushButton[isHighlighted=true]:hover,QToolButton[isHighlighted=true]:hover
+{
+	border-color: hsl(210, 80%, 35%);
+	background-color: hsl(210, 80%, 45%);
+}
+QPushButton[isHighlighted=true]:pressed,QToolButton[isHighlighted=true]:pressed
+{
+	border-color: hsl(210, 60%, 40%);
+	background-color: hsl(210, 60%, 50%);
+}
+QPushButton[isHighlighted=true]:disabled,QToolButton[isHighlighted=true]:disabled
+{
+	color: hsl(210, 0%, 100%);
+	border-width: 0px;
+	/*border-color: hsl(210, 0%, 60%);*/
+	background-color: hsl(210, 0%, 70%);
+}
+QPushButton[isFirst=false]
+{
+	border-width: 1px 1px 1px 0px	;
+}
+QPushButton[partType=&quot;part1&quot;]
+{
+	background-color: hsl(50, 50%, 90%);
+}
+QPushButton[partType=&quot;part2&quot;]
+{
+	background-color: hsl(290, 50%, 90%);
+}
+QPushButton[partType=&quot;description&quot;]
+{
+	/*background-color: hsl(0, 0%, 90%);*/
+}
+QPushButton[isCurrent=true]
+{
+	border-width: 2px;
+	border-color: hsl(210, 100%, 40%);
+}
+</string>
+        </property>
+        <layout class="QHBoxLayout" name="HL_timezone">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="playProgress">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QSlider{
+	background-color: rgba(255, 255, 255, 100);
+}
+QSlider::groove:horizontal {
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 3px;
+	border-color: hsl(210, 5%, 90%);
+	height: 25px; 
+}
+
+QSlider::handle:horizontal {
+	width: 8px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 1px;
+	border-color: hsl(210, 5%, 90%);
+	border-color: #ffffff;
+	background-color: hsl(210, 100%, 40%);
+}
+
+QSlider::sub-page:horizontal {
+	border-style: solid;
+	border-color: hsl(210, 5%, 90%);
+	border-width: 1px;
+	border-radius: 3px;
+	
+	background-color: rgba(0, 102, 204, 100);
+}</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="invertedAppearance">
+         <bool>false</bool>
+        </property>
+        <property name="invertedControls">
+         <bool>false</bool>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TickPosition::NoTicks</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QWidget" name="widget_top" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>思源黑体 CN VF Medium</family>
+       <pointsize>10</pointsize>
+       <italic>false</italic>
+       <fontweight>Medium</fontweight>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget{
+	color: #ffffff;
+	background-color: hsl(210, 100%, 40%);
+}
+QWidget#widget_top
+{
+	border: solid;
+	border-width: 0px 2px 0px 2px;
+	border-color: hsl(210, 90%, 20%);
+}</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>20</number>
+      </property>
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="playtime">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+	font: 900 28pt &quot;Fira Code&quot;;
+}</string>
+        </property>
+        <property name="text">
+         <string>--:--</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="title">
+        <property name="maximumSize">
+         <size>
+          <width>500</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>思源黑体 CN VF Heavy</family>
+          <pointsize>16</pointsize>
+          <italic>false</italic>
+          <fontweight>Black</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+	
+	font: 900 16pt &quot;思源黑体 CN VF Heavy&quot;;
+}</string>
+        </property>
+        <property name="text">
+         <string>Loading File ...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QWidget" name="widget_status" native="true">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget
+{
+	border: solid;
+	border-width: 0px 2px 2px 2px;
+	border-color: hsl(210, 90%, 20%);
+}</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="statusbar">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+	color: #ffffff;
+	background-color: hsl(210, 100%, 40%);
+	padding-left: 5px;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Loading</string>
+        </property>
+        <property name="margin">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget_head" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget{
+	color: #ffffff;
+	background-color: hsl(210, 90%, 20%);
+}
+</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="windowTitle">
+        <property name="text">
+         <string>ESAudio Player - by MucheXD</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="wctrl_staytop">
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	border: none;
+}
+QPushButton:hover{
+	background-color: hsl(210, 90%, 30%);
+}
+QPushButton:checked{
+	background-color: hsl(210, 90%, 40%);
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ESAudioPlayer.qrc">
+          <normaloff>:/Res/staytop.svg</normaloff>:/Res/staytop.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>18</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="wctrl_minisize">
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	border: none;
+}
+QPushButton:hover{
+	border: none;
+	background-color: hsl(210, 90%, 30%);
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ESAudioPlayer.qrc">
+          <normaloff>:/Res/minisize.svg</normaloff>:/Res/minisize.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="wctrl_close">
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	border: none;
+}
+QPushButton:hover{
+	border: none;
+	background-color: hsl(210, 90%, 30%);
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ESAudioPlayer.qrc">
+          <normaloff>:/Res/close.svg</normaloff>:/Res/close.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+  <zorder>widget_top</zorder>
+  <zorder>widget_control</zorder>
+  <zorder>widget_timectrl</zorder>
+  <zorder>widget_status</zorder>
+  <zorder>widget_head</zorder>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="ESAudioPlayer.qrc"/>
+ </resources>
+ <connections/>
+</ui>

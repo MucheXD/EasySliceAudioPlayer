@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="/">
+    <file>Res/autostop.svg</file>
+    <file>Res/minisize.svg</file>
+    <file>Res/staytop.svg</file>
+    <file>Res/close.svg</file>
+    <file>Res/lighting.svg</file>
+    <file>Res/repeat.svg</file>
+    <file>Res/d10.svg</file>
+    <file>Res/next.svg</file>
+    <file>Res/p10.svg</file>
+    <file>Res/pause.svg</file>
+    <file>Res/play.svg</file>
+    <file>Res/previous.svg</file>
+    <file>Res/apptitlelogo.png</file>
+  </qresource>
+</RCC>
